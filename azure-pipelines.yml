@@ -6,6 +6,9 @@
 trigger:
 - master
 
+
+steps:
+
 - task: AzureFileCopy@4
   inputs:
     SourcePath: '/'
