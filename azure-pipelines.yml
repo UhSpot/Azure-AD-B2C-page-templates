@@ -1,0 +1,16 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+- task: AzureFileCopy@4
+  inputs:
+    SourcePath: '/'
+    azureSubscription: 'Pay-As-You-Go Dev/Test (0f086dc1-a63d-477f-bdb6-163c2d5e4b6f)'
+    Destination: 'AzureBlob'
+    storage: 'uhspotfiles'
+    ContainerName: 'root'
+    BlobPrefix: 'auth'
