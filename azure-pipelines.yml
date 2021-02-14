@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'azure-pipeline-latest'
+  vmImage: 'windows-latest'
 
 steps:
 
