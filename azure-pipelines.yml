@@ -18,4 +18,3 @@ steps:
     Destination: 'AzureBlob'
     storage: 'uhspotfiles'
     ContainerName: 'root'
-    BlobPrefix: 'auth'
