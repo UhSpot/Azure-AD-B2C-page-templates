@@ -18,6 +18,7 @@ This project contains the following templates:
 
 * Ocean Blue
 * Slate Gray
+* UhSpot Spec
 
 ## Getting Started
 
