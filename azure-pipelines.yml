@@ -13,7 +13,7 @@ steps:
 
 - task: AzureFileCopy@4
   inputs:
-    SourcePath: '/'
+    SourcePath: '$(System.DefaultWorkingDirectory)'
     azureSubscription: 'Pay-As-You-Go Dev/Test (0f086dc1-a63d-477f-bdb6-163c2d5e4b6f)'
     Destination: 'AzureBlob'
     storage: 'uhspotfiles'
