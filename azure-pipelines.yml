@@ -10,11 +10,9 @@ pool:
   vmImage: 'windows-latest'
 
 steps:
-
-- task: AzureFileCopy@4
+- task: AzureCLI@2
   inputs:
-    SourcePath: '$(System.DefaultWorkingDirectory)'
     azureSubscription: 'Pay-As-You-Go Dev/Test (0f086dc1-a63d-477f-bdb6-163c2d5e4b6f)'
-    Destination: 'AzureBlob'
-    storage: 'uhspotfiles'
-    ContainerName: 'root'
+    scriptType: 'ps'
+    scriptLocation: 'inlineScript'
+    inlineScript: 'write-host "Perform unit and integrations tests here"'
