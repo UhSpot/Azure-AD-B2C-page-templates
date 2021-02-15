@@ -6,7 +6,7 @@ $expirationDate = $(get-date -AsUTC).AddMinutes(5).tostring("yyyy-MM-ddTH:mmZ")
 $sourceDirectory = "/uhspot_spec/*"
 
 #we may need this: temp
-write-host $env:servicePrincipalId -ForegroundColor Yellow
+write-host ("spn - " + $env:servicePrincipalId) -ForegroundColor Yellow
 
 az role assignment create `
     --role "Storage Blob Data Contributor" `
