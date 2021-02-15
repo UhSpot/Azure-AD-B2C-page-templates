@@ -6,9 +6,9 @@ $storageAccount = "uhspotfiles"
 $container = "root"
 $expirationDate = $(get-date -AsUTC).AddMinutes(5).tostring("yyyy-MM-ddTH:mmZ")
 $sourceDirectory = $sourcePath + "uhspot_spec\*"
-$spn = $env:servicePrincipalId | ConvertFrom-SecureString -AsPlainText
+$spn = $env:servicePrincipalId
 #we may need this: temp
-write-host ("spn - " + $spn) -ForegroundColor Yellow
+write-host ("spn - " + $spn.Substring(0,10)) -ForegroundColor Yellow
 
 az role assignment create `
     --role "Storage Blob Data Contributor" `
