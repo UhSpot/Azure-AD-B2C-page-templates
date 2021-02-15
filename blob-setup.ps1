@@ -1,12 +1,14 @@
+param($sourcePath)
+
 $subscription = "0f086dc1-a63d-477f-bdb6-163c2d5e4b6f"
 $resourceGroup = "uhspot"
 $storageAccount = "uhspotfiles"
 $container = "root"
 $expirationDate = $(get-date -AsUTC).AddMinutes(5).tostring("yyyy-MM-ddTH:mmZ")
-$sourceDirectory = "/uhspot_spec/*"
-
+$sourceDirectory = $sourcePath + "uhspot_spec\*"
+$spn = $env:servicePrincipalId | ConvertFrom-SecureString -AsPlainText
 #we may need this: temp
-write-host ("spn - " + $env:servicePrincipalId) -ForegroundColor Yellow
+write-host ("spn - " + $spn) -ForegroundColor Yellow
 
 az role assignment create `
     --role "Storage Blob Data Contributor" `
