@@ -6,6 +6,7 @@ $storageAccount = "uhspotfiles"
 $container = "root"
 $expirationDate = $(get-date -AsUTC).AddMinutes(5).tostring("yyyy-MM-ddTH:mmZ")
 $sourceDirectory = $sourcePath + "uhspot_spec\*"
+$assetDirectory = $sourcePath + "assets\*"
 
 $userSas = az storage container generate-sas `
     --account-name $storageAccount `
@@ -16,6 +17,7 @@ $userSas = az storage container generate-sas `
     --auth-mode login `
     --as-user
 
+az storage copy -s $assetDirectory -d https://uhspotfiles.blob.core.windows.net/root/azureb2c/template --recursive
 az storage copy -s $sourceDirectory -d https://uhspotfiles.blob.core.windows.net/root/azureb2c/template --recursive
 
 az storage account revoke-delegation-keys `
