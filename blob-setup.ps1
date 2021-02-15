@@ -23,9 +23,8 @@ $userSas = az storage container generate-sas `
     --expiry $expirationDate `
     --auth-mode login `
     --as-user
-    
-az storage copy -s $sourceDirectory -d https://uhspotfiles.blob.core.windows.net/root/azureb2c/template] --recursive
 
+az storage copy -s $sourceDirectory -d https://uhspotfiles.blob.core.windows.net/root/azureb2c/template --recursive
 
 az storage account revoke-delegation-keys `
     --name $storageAccount `
