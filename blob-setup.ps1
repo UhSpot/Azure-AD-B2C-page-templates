@@ -17,7 +17,6 @@ $userSas = az storage container generate-sas `
     --auth-mode login `
     --as-user
 
-az storage copy -s ($sourcePath + "assets\favicon.ico") -d https://uhspotfiles.blob.core.windows.net/root/azureb2c/template/assets --recursive
 az storage copy -s $assetDirectory -d https://uhspotfiles.blob.core.windows.net/root/azureb2c/template/assets --recursive
 az storage copy -s $sourceDirectory -d https://uhspotfiles.blob.core.windows.net/root/azureb2c/template/uhspot_spec --recursive
 
