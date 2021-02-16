@@ -27,13 +27,28 @@
                             src="https://uhspotfiles.blob.core.windows.net/root/azureb2c/template/assets/images/logo.svg"
                             style="width:45px;height:45px;">
                           <div id="api">
-                              <div class="intro">
-                                  Sign up to UhSpot!
-                              </div>
                           </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script type="text/javascript">
+        function intro() {
+            // find the terms of use label element
+            var intro = document.querySelector('.intro');
+            if (!intro) {
+                return;
+            }
+            // create a new <a> element with the same inner text
+            var termsOfUseUrl = 'https://docs.microsoft.com/legal/termsofuse';
+            var introText = document.createElement('p');
+            introText.innerHTML = "UhSpot Sign Up"
+            // replace the label text with the new element
+            intro.replaceChild(introText, intro.firstChild);
+        }
+
+        intro();
+    </script>
 </body></html>
