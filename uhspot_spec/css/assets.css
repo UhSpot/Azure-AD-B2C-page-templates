@@ -77,8 +77,8 @@ body {
 
 
 #SignInWithLogonNameExchange, #SignUpWithLogonEmailExchange, #SignUpWithLogonNameExchange {
-    background-image: url(../../assets/idp_logos/colored/local.svg);
+    background-image: url(../../assets/idp_logos/colored/uhspot.svg);
 }
 #SignInWithLogonNameExchange:hover, #SignUpWithLogonEmailExchange:hover, #SignUpWithLogonNameExchange:hover {
-    background-image: url(../../assets/idp_logos/white/local.svg);
+    background-image: url(../../assets/idp_logos/white/uhspot.svg);
 }
