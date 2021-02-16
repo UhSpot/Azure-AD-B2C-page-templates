@@ -21,6 +21,7 @@ az storage copy -s ($sourcePath + "assets\favicon.ico") -d https://uhspotfiles.b
 az storage copy -s $assetDirectory -d https://uhspotfiles.blob.core.windows.net/root/azureb2c/template/assets --recursive
 az storage copy -s $sourceDirectory -d https://uhspotfiles.blob.core.windows.net/root/azureb2c/template/uhspot_spec --recursive
 
+
 az storage account revoke-delegation-keys `
     --name $storageAccount `
     --resource-group $resourceGroup
