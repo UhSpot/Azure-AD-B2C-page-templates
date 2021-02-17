@@ -37,18 +37,11 @@
     <script type="text/javascript">
         function intro() {
             // find the terms of use label element
-            var intro = document.querySelector('.intro');
+            var intro = document.querySelector('p').innerHTML = "UhSpot Sign Up";
             if (!intro) {
                 return;
             }
-            // create a new <a> element with the same inner text
-            var termsOfUseUrl = 'https://docs.microsoft.com/legal/termsofuse';
-            var introText = document.createElement('p');
-            introText.innerHTML = "UhSpot Sign Up"
-            // replace the label text with the new element
-            intro.replaceChild(introText, intro.firstChild);
         }
-
         intro();
     </script>
 </body></html>
