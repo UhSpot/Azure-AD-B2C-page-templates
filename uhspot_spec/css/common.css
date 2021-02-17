@@ -437,3 +437,7 @@ label {
         border-radius: 0px;
     }
 }
+
+.intro {
+  text-align: center;
+}
