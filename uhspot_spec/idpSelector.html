@@ -37,11 +37,16 @@
     <script type="text/javascript">
         function intro() {
             // find the terms of use label element
-            var intro = document.querySelector('p').innerHTML = "UhSpot Sign Up";
+            var intro = document.querySelector('.intro > p');
             if (!intro) {
                 return;
             }
+            var introText = document.createElement('p');
+            introText.innerHTML = "UhSpot Sign Up"
+            // replace the label text with the new element
+            intro.replaceWith(introText);
         }
+
         intro();
     </script>
 </body></html>
