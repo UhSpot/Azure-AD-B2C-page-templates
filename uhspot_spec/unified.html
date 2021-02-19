@@ -40,7 +40,9 @@
                 return;
             }
             // replace the label text with the new element
-            intro.replaceWith(null)
+            Array.prototype.forEach.call( intro, function( node ) {
+                node.parentNode.removeChild( node );
+            });
         }
         intro();
     </script>
