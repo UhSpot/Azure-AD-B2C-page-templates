@@ -1,5 +1,8 @@
 body {
-    background-image: url(../../assets/backgrounds/uhspot-bkg.png);
+  background-color: #E30A17;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 @font-face {
     font-family: 'SegoeUI';
