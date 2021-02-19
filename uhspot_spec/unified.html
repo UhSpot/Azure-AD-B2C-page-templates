@@ -31,5 +31,19 @@
         </div>
     </div>
 
+    <script type="text/javascript">
+        function intro() {
+            // find the terms of use label element
+            var intro = document.querySelector('.intro > h2');
+            if (!intro) {
+                return;
+            }
+            var introText = document.createElement('p');
+            introText.innerHTML = ""
+            // replace the label text with the new element
+            intro.replaceWith(introText);
+        }
+        intro();
+    </script>
 
 </body></html>
