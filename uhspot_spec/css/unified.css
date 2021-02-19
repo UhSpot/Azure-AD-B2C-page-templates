@@ -51,7 +51,9 @@
   width: 100%;
 }
 .unified_container .row .panel-default #api .localAccount .intro h2 {
+  color: #fff;
   font-size: 20px;
+  text-align: center;
 }
 .unified_container .row .panel-default #api .localAccount .error {
   color: #bb0000;
