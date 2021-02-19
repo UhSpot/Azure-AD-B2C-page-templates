@@ -438,8 +438,8 @@ label {
     }
 }
 
-.panel-default {
-  border-color: none;
+.panel .panel-default {
+  border-color: transparent;
 }
 
 p {
