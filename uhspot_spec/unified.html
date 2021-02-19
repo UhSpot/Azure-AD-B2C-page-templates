@@ -36,12 +36,13 @@
             // find the terms of use label element
             var intro = document.querySelector('.intro > h2');
             if (!intro) {
+                console.warn("intro > h2 not found")
                 return;
             }
-            var introText = document.createElement('p');
+            var introText = document.createElement('h2');
             introText.innerHTML = ""
             // replace the label text with the new element
-            intro.replaceWith(introText);
+            intro.remove();
         }
         intro();
     </script>
